@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Primeiro Angular</title>
 </head>
-<body>
 
-    <div ng-app="">
+<body>
+    <!-- 
+        ng-app define um aplicativo AngularJS.
+        ng-model vincula o valor dos controles HTML (entrada, seleção, textarea) aos dados do aplicativo.
+        ng-bind liga os dados do aplicativo à visualização HTML
+
+    -->
+    <!-- ng-app diz ao AngularJS que o elemento <div> é o "proprietário" de um aplicativo AngularJS .-->
+    <!-- ng-init serve para inicializar variaveis no angular -->
+    <div ng-app="" ng-init="firstName='Patrick'">
+        <!-- ng-model vincula o valor do campo de entrada ao nome da variável da aplicação -->
         <p>Nome: <input type="text" ng-model="name"></p>
+        <!--ng-bind liga o innerHTML do elemento <p> ao nome da variável da aplicação .-->
         <p ng-bind="name"></p>
+        <!-- expressões em Angular são escritas dentro de chaves duplas -->
+        <p>O nome é <small ng-bind="firstName"></small></p>
+        <p> soma = {{5+5}}</p>
     </div>
 
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </body>
+
 </html>
