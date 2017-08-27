@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Os módulos AngularJS definem as aplicações AngularJS.        
+        Os controladores AngularJS controlam as aplicações AngularJS.        
+        A diretiva ng-app define o aplicativo, a diretiva ng-controller define o controlador. -->
+    <div ng-app="myApp" ng-controller="myControl">
+        Nome: <input type="text" ng-model="firstName"> Sobrenome: <input type="text" ng-model="lastName">
+        <br> Nome completo: {{firstName + " " + lastName}}
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myControl', function ($scope) {
+            $scope.firstName = "Patrick";
+            $scope.lastName = "Silva";
+        });
+    </script>
+</body>
+
+</html>
