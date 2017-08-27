@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplo</title>
+</head>
+
+<body>
+    <div ng-app="" ng-init="primeiroVoce='Pasp'; segVoce='trisck'; myCor='red'">
+        <p>
+            {{primeiroVoce + " " + segVoce}}
+        </p>
+        <input style="background-color:{{myCor}}" ng-model="myCor" value="{{myCor}}">
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</body>
+
+</html>
