@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Primeiro Angular</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
 </head>
 
 <body>
@@ -20,15 +20,20 @@
     <!-- ng-init serve para inicializar variaveis no angular -->
     <div ng-app="" ng-init="firstName='Patrick'">
         <!-- ng-model vincula o valor do campo de entrada ao nome da variável da aplicação -->
-        <p>Nome: <input type="text" ng-model="name"></p>
+        <p>Nome:
+            <input type="text" ng-model="name">
+        </p>
         <!--ng-bind liga o innerHTML do elemento <p> ao nome da variável da aplicação .-->
         <p ng-bind="name"></p>
         <!-- expressões em Angular são escritas dentro de chaves duplas -->
-        <p>O nome é <small ng-bind="firstName"></small></p>
+        <p>O nome é
+            <small ng-bind="firstName"></small>
+        </p>
         <p> soma = {{5+5}}</p>
     </div>
 
-  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </body>
 
 </html>
